@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績計算網站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <!-- 這是開場動畫 -->
+    <section class="animation-wrapper">
+        <section class="animation">
+            <div class="hero">
+                <img src="./pexels-photo-270348.jpeg" alt="程式碼背景圖">
+            </div>
+        </section>
+        <div class="slider"></div>
+    </section>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">等級分析</a></li>
+                <li><a href="#">服務條款</a></li>
+                <li><a href="#">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-part">
+            <h1>成績輸入表</h1>
+            <div class="buttons">
+                <button class="btn sort-descending">降序排序</button>
+                <button class="btn sort-ascending">升序排序</button>
+            </div>
+
+            <div class="allInputs">
+                <form>
+                    <div class="grader">
+                        <input type="text" placeholder="選修課" class="class-type" list="opt" /><!--
+                                          --><input type="text" placeholder="班級編號" class="class-number" /><!--
+                                          --><input type="number" placeholder="學分" min="0" max="6"
+                            class="class-credit" /><!--
+                                          --><select name="select" class="select">
+                            <option value=""></option>
+                            <option value="A">A</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B">B</option>
+                            <option value="B-">B-</option>
+                            <option value="C+">C+</option>
+                            <option value="C">C</option>
+                            <option value="C-">C-</option>
+                            <option value="D+">D+</option>
+                            <option value="D">D</option>
+                            <option value="D-">D-</option>
+                            <option value="F">F</option>
+                        </select><!--
+                        --><button class="trash-button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </form>
+                <form>
+                    <div class="grader">
+                        <input type="text" placeholder="選修課" class="class-type" list="opt" /><!--
+                                          --><input type="text" placeholder="班級編號" class="class-number" /><!--
+                                          --><input type="number" placeholder="學分" min="0" max="6"
+                            class="class-credit" /><!--
+                                          --><select name="select" class="select">
+                            <option value=""></option>
+                            <option value="A">A</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B">B</option>
+                            <option value="B-">B-</option>
+                            <option value="C+">C+</option>
+                            <option value="C">C</option>
+                            <option value="C-">C-</option>
+                            <option value="D+">D+</option>
+                            <option value="D">D</option>
+                            <option value="D-">D-</option>
+                            <option value="F">F</option>
+                        </select><!--
+            			--><button class="trash-button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </form>
+                <form>
+                    <div class="grader">
+                        <input type="text" placeholder="選修課" class="class-type" list="opt" /><!--
+                      --><input type="text" placeholder="班級編號" class="class-number" /><!--
+                      --><input type="number" placeholder="學分" min="0" max="6" class="class-credit" /><!--
+                      --><select name="select" class="select">
+                            <option value=""></option>
+                            <option value="A">A</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B">B</option>
+                            <option value="B-">B-</option>
+                            <option value="C+">C+</option>
+                            <option value="C">C</option>
+                            <option value="C-">C-</option>
+                            <option value="D+">D+</option>
+                            <option value="D">D</option>
+                            <option value="D-">D-</option>
+                            <option value="F">F</option>
+                        </select><!--
+                        
+                        --><button class="trash-button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="plus-btn"><i class="fas fa-plus-square"></i></button>
+
+            <div class="result">
+                <p id="gpa-text">你的學期<br>GPA 是</p>
+                <h2 id="result-gpa">0.00</h2>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+        <div id="footerBack">
+            <p>
+                連絡人姓名：張法鬥
+            </p>
+            <p>
+                連絡電話：0912345678
+            </p>
+            <p>
+                聯絡地址：法鬥市法鬥街法鬥路
+            </p>
+            <p>
+                ©2023張法鬥版權所有
+            </p>
+        </div>
+
+    </footer>
+
+
+    <datalist id="opt">
+        <option value="HLTH">健康學</option>
+        <option value="HIST">歷史學</option>
+        <option value="HEC">家政學</option>
+        <option value="HTM">酒店旅遊管理</option>
+        <option value="HUM">人文學科</option>
+        <option value="IS">信息系統</option>
+        <option value="IT">信息技術</option>
+        <option value="ICS">國際文化研究</option>
+        <option value="IPB">跨文化和平建設</option>
+        <option value="JPN">日語</option>
+        <option value="LING">語言學</option>
+        <option value="AMOR">毛利語</option>
+    </datalist>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="style.js"></script>
+</body>
+
+</html>
